@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap')
+/* 
+ < ============================== >
+ < ====== : variables : ====== > 
+ < ============================== >*/
+$bg-color: #1d1d20
+$fg-color: #1D1D37
+$font-color: #ddd
+// $primary: #EA4B78
+$gray1: #8C949C
+$gray2: #8C8C9C
+$gray3: #706B7E
+$gray4: #44404e
+$success: #97C23A
+$danger: #CC5A98
+$info: #506CAE
+$yellow: #EDA627
+$primary: #5189D3
+// $transition: all 0.3s linear
+$spacing: 0.1rem
+$radius: 0.25rem
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+$max-width: 1170px
+$fixed-width: 620px
+/*
+ ===============
+ Global Styles
+ ===============*/
+
+*,
+::after,
+::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+
+  background-color: $bg-color
+  color: $font-color
+  font-family: 'Roboto', sans-serif
+  line-height: 1.5
+  font-size: 0.875rem
+
+ul
+  list-style-type: none
+
+a
+  text-decoration: none
+
+h1,
+h2,
+h3,
+h4
+  letter-spacing: $spacing
+  text-transform: capitalize
+  line-height: 1.25
+  margin-bottom: 0.75rem
+
+h1
+  font-size: 3rem
+
+h2
+  font-size: 2rem
+
+h3
+  font-size: 1.25rem
+
+h4
+  font-size: 0.875rem
+
+p
+  margin-bottom: 1.25rem
+  color: $gray4
+
+@media screen and (min-width: 800px)
+  h1
+    font-size: 4rem
+
+    h2
+      font-size: 2.5rem
+
+    h3
+      font-size: 1.75rem
+
+    h4
+      font-size: 1rem
+
+    body
+      font-size: 1rem
+
+    h1,
+    h2,
+    h3,
+    h4
+      line-height: 1
+
+/* End global styling */
+
+/* 
+ < ============================== >
+ < ====== : Main styling : ====== > 
+ < ============================== >*/
+
+.cover
+  background: #343e59
+  color: #777
+
+.app_name
+  text-align: center
+  align-items: center
+  margin: auto
+
+.toolbar
+  background-color: $primary
+
+.centered
+  margin: auto
+  width: 50%
+  margin-top: 25%
+  text-align: center
+  /* border: 3px solid green; */
+  padding: 10px
+
+.section
+  padding: 2em
+  margin: 2em
+
+/* 
+ < ============================== >
+ < ====== : Card styling : ====== > 
+ < ============================== >*/
+
+.blue
+  border-radius: 5%
+  border: 1px solid #ddd
+  border-bottom: 10px solid $info
+
+.red
+  border-radius: 5%
+  border: 1px solid #ddd
+  border-bottom: 10px solid $danger
+
+.green
+  border-radius: 10px
+  border: 1px solid #ddd
+  border-bottom: 10px solid $success
+.gray
+  border-radius: 10px
+  border: 1px solid #ddd
+  border-bottom: 10px solid rgba(85, 85, 85, 0.8)
+
+.container
+  align-items: center
+  align-content: center
+  text-align: center
+
+/* 
+ < ============================== >
+ < ====== : Map styling : ======= > 
+ < ============================== >*/
+.map_section
+  /* margin-top: 2em; */
+  padding-top: 2em
+  padding-bottom: 2em
+
+.map_marker
+  border-radius: 50%
+  border: 3px solid red
+  background: red
+  opacity: 0.6
+
+.detail
+  width: 300px
+  height: 300px
+  background: #fff200
+  display: none
+
+.map
+  width: auto
+  height: 40%
+  overflow: hidden
+
+@media screen and (max-width: 600px)
+  .map
+    display: none
+
+    &_section .map_container
+      display: none
+
+    &_marker
+      display: none
